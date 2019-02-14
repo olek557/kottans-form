@@ -1,0 +1,3 @@
+@import url(vendeors/normalize.css);
+body:after {
+  content: "SCSS is connected"; }
