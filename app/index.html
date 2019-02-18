@@ -47,18 +47,51 @@
             <div class="t-center">
               <h2 class="h2">Select what you want to translate</h2>
             </div>
-            <div class="input__row input__row--3-col">
+            <div class="input-row input-row--3-col">
               <div class="radio radio--huge">
                 <input type="radio" id="translate-web" class="radio__input visuallyhidden">
                 <label for="translate-web" class="radio__label">
+                  <img src="images/documents-icon.png" alt="">
                   <span class="radio__name">Website</span>
                 </label>
               </div>
             </div>
-            <ul class="form-list">
+            <ol class="form-list">
               <li class="form-list__item">
-                <h3>Upload your documents</h3>
-                <input type="file">
+                <h3 class="h3">Upload your documents</h3>
+                <div class="upload-file">
+                  <input type="file" class="upload-file__input visuallyhidden" id="fileUploading">
+                  <label for="fileUploading" class="upload-file__label btn btn--big"><i class="fas fa-cloud-upload-alt btn__icon"></i>Upload a new file</label>
+                </div>
+                <div class="files">
+                  <table class="table">
+                    <tr class="table__row">
+                      <th class="table__header">File name</th>
+                      <th class="table__header">File size</th>
+                      <th class="table__header">Number of words</th>
+                      <th class="table__header">Remove</th>
+                    </tr>
+                    <tr class="table__row">
+                      <th class="table__cell">
+                          <span class="file__name">
+                            file-name-loong.docx
+                          </span>
+                      </th>
+                    </tr>
+                  </table>
+                </div>
+              </li>
+              <li class="form-list__item">
+                <h3 class="h3">Choose your languages pairings</h3>
+                <div class="input-row input-row--labeled">
+                    <div class="input-row__label">From</div>
+                    <select name="" id="" class="form-control select">
+                      <option value="">1</option>
+                      <option value="">1</option>
+                      <option value="">1</option>
+                      <option value="">1</option>
+                    </select>
+                </div>
               </li>
             </ul>
           </div>

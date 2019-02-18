@@ -1,8 +1,8 @@
 @import "vendors/normalize";
+@import "components/typography";
 @import "components/form";
 @import "components/mixin";
 @import "components/table";
-@import "components/typography";
 @import "components/button";
 @import "components/card";
 
@@ -42,3 +42,32 @@ body {
   height: 1px; width: 1px; 
   margin: -1px; padding: 0; border: 0; 
 }
+
+.form-list {
+  counter-reset: number-counter;
+  list-style: none;
+  padding-left: 0;
+  margin: 100px 0;
+}
+
+.form-list__item {
+  position: relative;
+  counter-increment: number-counter;
+  &:after {
+    content: counter(number-counter);
+    position: absolute;
+    left: -75px;
+    top: -10px;
+    border: 1px solid #9299ab;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+    line-height: 40px;
+    text-align: center;
+  }
+  & + & {
+    margin-top: 100px;
+  }
+}
+
