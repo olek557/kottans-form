@@ -1,3 +1,44 @@
 @import "vendors/normalize";
-@import "components/component";
+@import "components/form";
+@import "components/mixin";
+@import "components/table";
+@import "components/typography";
+@import "components/button";
+@import "components/card";
 
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #edeef4;
+}
+
+.container {
+  margin: 0 15px;
+  @include bp(medium) {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  @include bp(huge) {
+    max-width: 1200px;
+  }
+}
+
+// HELPERS
+.d-flex {
+  display: flex;
+}
+
+.t-center {
+  text-align: center;
+}
+
+.visuallyhidden { 
+  position: absolute; 
+  overflow: hidden; 
+  clip: rect(0 0 0 0); 
+  height: 1px; width: 1px; 
+  margin: -1px; padding: 0; border: 0; 
+}

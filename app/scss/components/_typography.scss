@@ -1,0 +1,40 @@
+.h2 {
+  font-size: 16px;
+  text-transform: uppercase;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #d8d9e1;
+  display: inline-block;
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  color: #6e7790;
+  font-weight: normal;
+}
+
+.h5 {
+  display: inline-block;
+  font-size: 12px;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #6e7790;
+  font-weight: bold;
+  position: relative;
+}
+
+.h5__icon {
+  font-size: 20px;
+  position: absolute;
+  left: -25px;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.text-block {
+  font-size: 14px;
+  color: #b0a7b9;
+  margin: 0;
+  & + * {
+    margin-top: 20px;
+  }
+}

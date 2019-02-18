@@ -1,0 +1,35 @@
+.input__row {
+  display: flex;
+}
+
+.input__row--3-col {
+  margin: 0 -15px;
+  & > * {
+    width: 33%;
+    margin: 0 15px;
+  }
+}
+
+.radio {
+  
+}
+
+.radio__name {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.radio__label {
+  width: 100%;
+  position: relative;
+  display: block;
+  min-height: 200px;
+  background-color: #f7f7fa;
+  border: 1px solid #d8dae1;
+  font-size: 14px;
+  color: #9199b9;
+  cursor: pointer;
+  background-repeat: 8px;
+}
