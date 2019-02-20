@@ -65,9 +65,14 @@ body {
     font-size: 16px;
     line-height: 40px;
     text-align: center;
+    color: #6e7790;
   }
   & + & {
     margin-top: 100px;
   }
 }
 
+.file__name-icon {
+  margin-right: 10px;
+  display: inline-block;
+}

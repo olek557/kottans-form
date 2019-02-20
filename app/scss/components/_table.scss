@@ -1,7 +1,14 @@
 .table {
-  table-layout: fixed;
   width: 100%;
   font-size: 12px;
+}
+
+.table--small {
+  table-layout: fixed;
+  .table__cell {
+    font-size: 11px;
+    padding: 5px;
+  }
 }
 
 .table__header {
@@ -12,7 +19,11 @@
 }
 
 .table__cell {
-  padding: 5px 0;
-  font-size: 11px;
+  padding: 10px;
+  font-size: 14px;
   color: #a6acc6;
+  font-weight: normal;
+  .fas {
+    color: #a6acc6;
+  }
 }

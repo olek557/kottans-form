@@ -29,14 +29,18 @@
                 <h5 class="h5">
                   Your order <i class="h5__icon far fa-clipboard"></i>
                 </h5>
-                <table class="table">
+                <table class="table table--small">
                   <tr class="table__row">
                     <th class="table__header">Items</th>
-                    <th class="table__header">Items</th>
+                    <th class="table__header">Details</th>
+                    <th class="table__header">Price</th>
+                    <th class="table__header">Delivery</th>
                   </tr>
                   <tr class="table__row">
                     <td class="table__cell">2 documents</td>
-                    <td class="table__cell">2 documents</td>
+                    <td class="table__cell">2 languages</td>
+                    <td class="table__cell">$ 696.06</td>
+                    <td class="table__cell">48 hours</td>
                   </tr>
                 </table>
               </div>
@@ -44,7 +48,7 @@
                 <input
                   type="submit"
                   class="btn btn--medium btn--primary"
-                  name="Place order"
+                  value="Place order"
                 />
                 <button class="btn btn--medium">Print qoute</button>
               </div>
@@ -54,8 +58,7 @@
                 Help center<i class="far fa-life-ring h5__icon"></i>
               </h5>
               <p class="text-block">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore,
-                tempora!
+                If you need asistance while placing your order, contact one of our belowed Project manager by phone or email.
               </p>
               <div class="d-flex">
                 <a href="" class="link">link 1</a>
@@ -72,13 +75,41 @@
                 <input
                   type="radio"
                   id="translate-web"
+                  name="translate-type"
+                  value="web"
                   class="radio__input visuallyhidden"
                 />
                 <label for="translate-web" class="radio__label">
-                  <img src="images/documents-icon.png" alt="" />
+                  <img src="images/website-icon.png" alt="" />
                   <span class="radio__name">Website</span>
                 </label>
               </div>
+              <div class="radio radio--huge">
+                  <input
+                    type="radio"
+                    id="translate-doc"
+                    name="translate-type"
+                    value="doc"
+                    class="radio__input visuallyhidden"
+                  />
+                  <label for="translate-doc" class="radio__label">
+                    <img src="images/documents-icon.png" alt="" />
+                    <span class="radio__name">Document</span>
+                  </label>
+                </div>
+                <div class="radio radio--huge">
+                    <input
+                      type="radio"
+                      id="translate-social"
+                      name="translate-type"
+                      value="social"
+                      class="radio__input visuallyhidden"
+                    />
+                    <label for="translate-social" class="radio__label">
+                      <img src="images/social-account-icon.png" alt="Social account" />
+                      <span class="radio__name">Social Account</span>
+                    </label>
+                  </div>
             </div>
             <ol class="form-list">
               <li class="form-list__item">
@@ -102,14 +133,17 @@
                       <th class="table__header">File name</th>
                       <th class="table__header">File size</th>
                       <th class="table__header">Number of words</th>
-                      <th class="table__header">Remove</th>
+                      <th class="table__header t-center">Remove</th>
                     </tr>
                     <tr class="table__row">
                       <th class="table__cell">
                         <span class="file__name">
-                          file-name-loong.docx
+                            <i class="fas fa-file-alt file__name-icon"></i> file-name-loong.docx
                         </span>
                       </th>
+                      <th class="table__cell">78kb</th>
+                      <th class="table__cell">842</th>
+                      <th class="table__cell t-center"><button class="link"><i class="fas fa-trash"></i></button></th>
                     </tr>
                   </table>
                 </div>
