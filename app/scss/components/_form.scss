@@ -2,6 +2,15 @@
   display: flex;
 }
 
+.input-row--labeled {
+  & + & {
+    margin-top: 35px;
+  }
+  & > * + * {
+    margin-left: 25px;
+  }
+}
+
 .input-row--3-col {
   margin: 0 -15px;
   & > * {
@@ -16,12 +25,30 @@
   color: #a5acc5;
   width: 60px;
   text-align: right;
+  line-height: 50px;
+  padding-right: 20px;
+}
+
+.input-col {
+  display: flex;
+  flex-direction: column;
+  & > * + * {
+    margin-top: 25px;
+  }
 }
 
 .radio--huge {
   .radio__label {
     padding-top: 25px;
     text-align: center;
+    width: 100%;
+    min-height: 200px;
+  }
+  .radio__name {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translate(-50%);
   }
 }
 
@@ -50,18 +77,9 @@
   }
 }
 
-.radio__name {
-  position: absolute;
-  bottom: 30px;
-  left: 50%;
-  transform: translate(-50%);
-}
-
 .radio__label {
-  width: 100%;
   position: relative;
   display: block;
-  min-height: 200px;
   background-color: #f7f7fa;
   border: 5px solid transparent;
   box-shadow: 0 0 0 1px #d8dae1;
@@ -83,14 +101,53 @@
   border-radius: 3px;
 }
 
-.upload-file__label {
+.select { 
+  width: 100%;
+  height: 100%;
+  appearance: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  border: none;
+  background: none;
+  color: #9199b8;
+  padding-left: 50px;
 }
 
-.select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  -o-appearance: none;
-  appearance: none;
+.select-wrapper {
   width: 200px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 17px;
+  border: 1px solid #d8d9e1;
+  border-radius: 3px;
+  position: relative;
+  cursor: pointer;
+  background-color: #f7f7fa;
+  &:after {
+    content: '';
+    height: 48px;
+    width: 1px;
+    background-color: #d8d9e1;
+    position: absolute;
+    right: 50px;
+    top: 0;
+  }
+  &:before {
+    content: '';
+    border: 6px solid;
+    border-color: #d8d9e1 transparent transparent transparent;
+    position: absolute;
+    right: 20px;
+    top: 22px;
+  }
+}
+
+.select-wrapper--with-delete {
+  margin-right: 20px;
+  & > .link {
+    position: absolute;
+    right: -20px;
+    top: 20px;
+  }
 }

@@ -1,106 +1,160 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Kottans form</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <!-- build:css -->
-    <link rel="stylesheet" href="css/general.css">
-    <!-- endbuild -->
-  </head>
-  <body>
-    <h1>Kottans form</h1>
-    <div class="container">
-      <form action="">
-        <section class="card">
-          <header class="card__header header-card">
-            <div class="header-card__info">
-              <div class="header-card__details">
-                <h5 class="h5">Your order <i class="h5__icon far fa-clipboard"></i></h5>
+
+<head>
+  <meta charset="utf-8">
+  <title>Kottans form</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <!-- build:css -->
+  <link rel="stylesheet" href="css/general.css">
+  <!-- endbuild -->
+</head>
+
+<body>
+  <h1>Kottans form</h1>
+  <div class="container">
+    <form action="">
+      <section class="card">
+        <header class="card__header header-card">
+          <div class="header-card__info">
+            <div class="header-card__details">
+              <h5 class="h5">Your order <i class="h5__icon far fa-clipboard"></i></h5>
+              <table class="table">
+                <tr class="table__row">
+                  <th class="table__header">Items</th>
+                  <th class="table__header">Items</th>
+                </tr>
+                <tr class="table__row">
+                  <td class="table__cell">2 documents</td>
+                  <td class="table__cell">2 documents</td>
+                </tr>
+              </table>
+            </div>
+            <div class="header-card__action">
+              <input type="submit" class="btn btn--medium btn--primary" name="Place order">
+              <button class="btn btn--medium">Print qoute</button>
+            </div>
+          </div>
+          <div class="header-card__help">
+            <h5 class="h5">Help center<i class="far fa-life-ring h5__icon"></i></h5>
+            <p class="text-block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, tempora!</p>
+            <div class="d-flex">
+              <a href="" class="link">link 1</a>
+              <a href="" class="link">link 2</a>
+            </div>
+          </div>
+        </header>
+        <div class="card__content">
+          <div class="t-center">
+            <h2 class="h2">Select what you want to translate</h2>
+          </div>
+          <div class="input-row input-row--3-col">
+            <div class="radio radio--huge">
+              <input type="radio" id="translate-web" class="radio__input visuallyhidden">
+              <label for="translate-web" class="radio__label">
+                <img src="images/documents-icon.png" alt="">
+                <span class="radio__name">Website</span>
+              </label>
+            </div>
+          </div>
+          <ol class="form-list">
+            <li class="form-list__item">
+              <h3 class="h3">Upload your documents</h3>
+              <div class="upload-file">
+                <input type="file" class="upload-file__input visuallyhidden" id="fileUploading">
+                <label for="fileUploading" class="upload-file__label btn btn--big"><i
+                    class="fas fa-cloud-upload-alt btn__icon"></i>Upload a new file</label>
+              </div>
+              <div class="files">
                 <table class="table">
                   <tr class="table__row">
-                    <th class="table__header">Items</th>
-                    <th class="table__header">Items</th>
+                    <th class="table__header">File name</th>
+                    <th class="table__header">File size</th>
+                    <th class="table__header">Number of words</th>
+                    <th class="table__header">Remove</th>
                   </tr>
                   <tr class="table__row">
-                    <td class="table__cell">2 documents</td>
-                    <td class="table__cell">2 documents</td>
+                    <th class="table__cell">
+                      <span class="file__name">
+                        file-name-loong.docx
+                      </span>
+                    </th>
                   </tr>
                 </table>
               </div>
-              <div class="header-card__action">
-                <input type="submit" class="btn btn--medium btn--primary" name="Place order">
-                <button class="btn btn--medium">Print qoute</button>
-              </div>
-            </div>
-            <div class="header-card__help">
-              <h5 class="h5">Help center<i class="far fa-life-ring h5__icon"></i></h5>
-              <p class="text-block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, tempora!</p>
-              <div class="d-flex">
-                <a href="" class="link">link 1</a>
-                <a href="" class="link">link 2</a>
-              </div>
-            </div>
-          </header>
-          <div class="card__content">
-            <div class="t-center">
-              <h2 class="h2">Select what you want to translate</h2>
-            </div>
-            <div class="input-row input-row--3-col">
-              <div class="radio radio--huge">
-                <input type="radio" id="translate-web" class="radio__input visuallyhidden">
-                <label for="translate-web" class="radio__label">
-                  <img src="images/documents-icon.png" alt="">
-                  <span class="radio__name">Website</span>
-                </label>
-              </div>
-            </div>
-            <ol class="form-list">
-              <li class="form-list__item">
-                <h3 class="h3">Upload your documents</h3>
-                <div class="upload-file">
-                  <input type="file" class="upload-file__input visuallyhidden" id="fileUploading">
-                  <label for="fileUploading" class="upload-file__label btn btn--big"><i class="fas fa-cloud-upload-alt btn__icon"></i>Upload a new file</label>
+            </li>
+            <li class="form-list__item">
+              <h3 class="h3">Choose your languages pairings</h3>
+              <div class="input-row input-row--labeled">
+                <div class="input-row__label">From</div>
+                <div class="select-wrapper">
+                  <select name="" id="" class="form-control select">
+                    <option value="">English</option>
+                    <option value="">Arabic</option>
+                    <option value="">Franch</option>
+                    <option value="">Italian</option>
+                  </select>
                 </div>
-                <div class="files">
-                  <table class="table">
-                    <tr class="table__row">
-                      <th class="table__header">File name</th>
-                      <th class="table__header">File size</th>
-                      <th class="table__header">Number of words</th>
-                      <th class="table__header">Remove</th>
-                    </tr>
-                    <tr class="table__row">
-                      <th class="table__cell">
-                          <span class="file__name">
-                            file-name-loong.docx
-                          </span>
-                      </th>
-                    </tr>
-                  </table>
+              </div>
+              <div class="input-row input-row--labeled">
+                <div class="input-row__label">To</div>
+                <div class="select-wrapper">
+                  <select name="" id="" class="form-control select">
+                    <option value="">English</option>
+                    <option value="">Arabic</option>
+                    <option value="">Franch</option>
+                    <option value="">Italian</option>
+                  </select>
                 </div>
-              </li>
-              <li class="form-list__item">
-                <h3 class="h3">Choose your languages pairings</h3>
-                <div class="input-row input-row--labeled">
-                    <div class="input-row__label">From</div>
-                    <select name="" id="" class="form-control select">
-                      <option value="">1</option>
-                      <option value="">1</option>
-                      <option value="">1</option>
-                      <option value="">1</option>
-                    </select>
+                <div class="select-wrapper select-wrapper--with-delete">
+                  <select name="" id="" class="form-control select">
+                    <option value="">English</option>
+                    <option value="">Arabic</option>
+                    <option value="">Franch</option>
+                    <option value="">Italian</option>
+                  </select>
+                  <button class="link"><i class="fas fa-trash"></i></button>
                 </div>
-              </li>
+                <button class="btn btn--small"><i class="fas fa-plus btn__icon"></i>Add</button>
+              </div>
+            </li>
+            <li class="form-list__item">
+              <h3 class="h3">Select your desired tone</h3>
+              <div class="input-col">
+                <div class="radio radio--medium">
+                  <input type="radio" id="friendly-tone" class="radio__input visuallyhidden">
+                  <label for="friendly-tone" class="radio__label btn btn--medium">
+                    <i class="fas fa-comments btn__icon"></i>
+                    <span class="radio__name">Website</span>
+                  </label>
+                </div>
+                <div class="radio radio--medium">
+                  <input type="radio" id="corporate-tone" class="radio__input visuallyhidden">
+                  <label for="corporate-tone" class="radio__label btn btn--medium">
+                    <i class="fas fa-comments btn__icon"></i>
+                    <span class="radio__name">Website</span>
+                  </label>
+                </div>
+                <div class="radio radio--medium">
+                  <input type="radio" id="formal-tone" class="radio__input visuallyhidden">
+                  <label for="formal-tone" class="radio__label btn btn--medium">
+                    <i class="fas fa-comments btn__icon"></i>
+                    <span class="radio__name">Website</span>
+                  </label>
+                </div>
+              </div>
+            </li>
             </ul>
-          </div>
-          <footer class="card__footer"></footer>
-        </section>
-      </form>
-    </div>
-    <!-- build:js -->
-    <script src="js/main.js"></script>
-    <!-- endbuild  -->
-  </body>
+        </div>
+        <footer class="card__footer"></footer>
+      </section>
+    </form>
+  </div>
+  <!-- build:js -->
+  <script src="js/main.js"></script>
+  <!-- endbuild  -->
+</body>
+
 </html>
