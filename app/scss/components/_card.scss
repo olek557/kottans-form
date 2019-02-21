@@ -6,12 +6,21 @@
 
 .card__header {
   display: flex;
+  flex-direction: column;
   border-bottom: 1px solid $border-color;
+  @include bp(medium) {
+    flex-direction: row;
+  }
 }
 
 .header-card__info {
   display: flex;
-  padding: 30px 30px 25px 75px;
+  padding: 10px;
+  flex-direction: column;
+  @include bp(medium) {
+    flex-direction: row;
+    padding: 30px 30px 25px 75px;
+  }
 }
 
 .header-card__details {
@@ -21,21 +30,35 @@
 }
 
 .header-card__action {
+  margin-top: 20px;
+  @include bp(medium) {
+    display: flex;
+  }
   .btn + .btn {
     margin-top: 10px;
   }
 }
 
 .header-card__help {
-  padding: 25px 30px 25px 70px;
-  border-left: 1px solid $border-color;
-  min-width: 350px;
+  padding: 10px;
+  @include bp(medium) {
+    padding: 25px 30px 25px 70px;
+    border-left: 1px solid $border-color;
+    min-width: 350px;
+
+  }
 }
 
 .card__content {
-  padding: 0 100px 0 130px;
+  padding: 10px;
+  @include bp(medium) {
+    padding: 0 100px 0 130px;
+  }
 }
 
 .card__footer {
-  padding: 0 100px 70px 130px;
+  padding: 10px;
+  @include bp(medium) {
+    padding: 0 100px 70px 130px;
+  }
 }

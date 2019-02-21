@@ -1,9 +1,9 @@
+@import "components/mixin";
 @import "components/variables";
 @import "vendors/normalize";
 @import "components/typography";
 @import "components/button";
 @import "components/form";
-@import "components/mixin";
 @import "components/table";
 @import "components/card";
 @import "components/form-list";
@@ -20,7 +20,7 @@ body {
 }
 
 .container {
-  margin: 0 15px;
+  margin: 0 5px;
   @include bp(medium) {
     max-width: 900px;
     margin: 0 auto;
@@ -66,8 +66,11 @@ body {
 .additional-info {
   max-width: 480px;
   display: inline-block;
-  padding: 30px 30px 30px 70px;
+  padding: 10px;
   border: 1px solid $border-color;
   border-radius: 5px;
   margin-top: 90px;
+  @include bp(medium) {
+    padding: 30px 30px 30px 70px;
+  }
 }

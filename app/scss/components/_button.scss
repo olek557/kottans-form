@@ -19,15 +19,24 @@
 }
 
 .btn--small {
-  width: 120px;
+  width: 100%;
+  @include bp(medium) {
+    width: 120px;
+  }
 }
 
 .btn--medium {
-  width: 170px;
+  width: 100%;
+  @include bp(medium) {
+    width: 170px;
+  }
 }
 
 .btn--big {
-  width: 230px;
+  width: 100%;
+  @include bp(medium) {
+    width: 230px;
+  }
 }
 
 .btn--primary {

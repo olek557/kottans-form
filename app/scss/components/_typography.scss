@@ -43,14 +43,19 @@ h1 {
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 15px;
+  @include bp(small) {
+    padding-left: 30px;
+  }
 }
 
 .h5__icon {
   position: absolute;
   font-size: 20px;
-  left: -35px;
-  top: 50%;
-  transform: translate(0, -50%);
+  top: -5px;
+  left: 0;
+  @include bp(medium) {
+    left: -35px;
+  }
 }
 
 .text-block {

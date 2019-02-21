@@ -1,11 +1,22 @@
 .input-row {
   display: flex;
   align-items: center;
+  @include bp(small) {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
   & + & {
-    margin-top: 35px;
+    margin-top: 10px;
+    @include bp(medium) {
+      margin-top: 35px;
+    }
   }
   & > * + * {
-    margin-left: 25px;
+    margin-top: 10px;
+    @include bp(medium) {
+      margin-top: 0;
+      margin-left: 25px;
+    }
   }
 }
 
@@ -18,28 +29,42 @@
 }
 
 .input-row--3-col {
-  margin: 0 -15px;
+  margin: 0 -10px;
+  flex-direction: row;
+  @include bp(medium) {
+    margin: 0 -15px;
+  }
   & > * {
-    width: 33.33%;
-    margin: 0 15px;
+    width: 100%;
+    margin: 10px;
+    @include bp(medium) {
+      width: 33.33%;
+      margin: 0 15px;
+    }
   }
 }
 
 .input-row__label {
-  width: 35px;
+  width: 100%;
   color: $text-dark;
   font-size: 11px;
   text-transform: uppercase;
-  text-align: right;
   line-height: 50px;
   padding-right: 0;
+  @include bp(medium){
+    text-align: right;
+    width: 35px;
+  }
 }
 
 .input-col {
   display: flex;
   flex-direction: column;
   & > * + * {
-    margin-top: 25px;
+    margin-top: 10px;
+    @include bp(large) {
+      margin-top: 25px;
+    }
   }
 }
 
@@ -61,9 +86,13 @@
 }
 
 .radio--medium {
+  width: 100%;
   .radio__label {
-    width: 215px;
+    width: 100%;
     min-height: 100px;
+    @include bp(medium) {
+      width: 215px;
+    }
   }
   .radio__img {
     position: absolute;
@@ -76,11 +105,14 @@
 
 .radio--small {
   .radio__label {
-    width: 230px;
     min-height: 65px;
     font-size: 16px;
     line-height: 55px;
     padding-left: 30px;
+    width: 100%;
+    @include bp(medium) {
+      width: 230px;
+    }
   }
   .radio__icon {
     font-size: 20px;
@@ -137,22 +169,37 @@
 }
 
 .files {
-  padding: 30px 40px;
+  padding: 10px;
   border: 1px solid $border-color;
   border-radius: 5px;
+  overflow-y: auto;
+  @include bp(medium) {
+    padding: 30px 40px;
+  }
+  .table {
+    @include bp(small) {
+      white-space: nowrap;
+    }
+  }
 }
 
 .range {
   position: relative;
-  width: 400px;
+  width: 100%;
+  @include bp(medium) {
+    width: 400px;
+  }
 }
 
 .range__input {
   position: relative;
-  width: 400px;
+  width: 100%;
   appearance: none;
   border: 1px solid white;
   background-color: transparent;
+  @include bp(medium) {
+    width: 400px;
+  }
   &::-webkit-slider-runnable-track {
     // &::-moz-range-track {
     width: 400px;
@@ -233,15 +280,19 @@
     margin-left: -5px;
   }
   &:first-child {
-    left: -30px;
+    @include bp(medium) {
+      left: -30px;
+    }
   }
   &:last-child {
-    right: -30px;
+    @include bp(medium) {
+      right: -30px;
+    }
   }
 }
 
 .form-group {
-  // width: 300px;
+  width: 100%;
 }
 
 .form-label {
@@ -266,16 +317,27 @@
 }
 
 .form-control--tiny {
-  width: 100px;
+  @include bp(media){
+    width: 100px;
+  }
 }
+
 .form-control--small {
-  width: 170px;
+  @include bp(media){
+    width: 170px;
+  }
 }
+
 .form-control--medium {
-  width: 300px;
+  @include bp(media){
+    width: 300px;
+  }
 }
+
 .form-control--huge {
-  width: 380px;
+  @include bp(media){
+    width: 380px;
+  }
 }
 
 .select {
@@ -295,7 +357,7 @@
 
 .select-wrapper {
   position: relative;
-  width: 200px;
+  width: 100%;
   height: 50px;
   font-size: 17px;
   line-height: 50px;
@@ -304,6 +366,9 @@
   cursor: pointer;
   background-color: $background-color;
   border: 1px solid $border-color;
+  @include bp(medium) {
+    width: 200px;
+  }
   &:after {
     content: "";
     position: absolute;
@@ -325,6 +390,9 @@
 
 .select-wrapper--with-delete {
   margin-right: 20px;
+  @include bp(small) {
+    width: calc(100% - 20px);
+  }
   & > .link {
     position: absolute;
     right: -23px;
