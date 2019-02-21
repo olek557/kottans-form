@@ -1,3 +1,4 @@
+@import "components/variables";
 @import "vendors/normalize";
 @import "components/typography";
 @import "components/button";
@@ -5,14 +6,17 @@
 @import "components/mixin";
 @import "components/table";
 @import "components/card";
+@import "components/form-list";
 
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
-  background-color: #edeef4;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 1px;
+  background-color: $background-color;
+  padding-bottom: 100px;
 }
 
 .container {
@@ -22,7 +26,7 @@ body {
     margin: 0 auto;
   }
   @include bp(huge) {
-    max-width: 1200px;
+    max-width: 1140px;
   }
 }
 
@@ -35,44 +39,35 @@ body {
   text-align: center;
 }
 
-.visuallyhidden { 
-  position: absolute; 
-  overflow: hidden; 
-  clip: rect(0 0 0 0); 
-  height: 1px; width: 1px; 
-  margin: -1px; padding: 0; border: 0; 
+.tc-accent-yellow {
+  color: $accent-yellow-color;
+}
+.tt-uppercase {
+  text-transform: uppercase;
 }
 
-.form-list {
-  counter-reset: number-counter;
-  list-style: none;
-  padding-left: 0;
-  margin: 100px 0;
-}
-
-.form-list__item {
-  position: relative;
-  counter-increment: number-counter;
-  &:after {
-    content: counter(number-counter);
-    position: absolute;
-    left: -75px;
-    top: -10px;
-    border: 1px solid #9299ab;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    font-size: 16px;
-    line-height: 40px;
-    text-align: center;
-    color: #6e7790;
-  }
-  & + & {
-    margin-top: 100px;
-  }
+.visuallyhidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
 }
 
 .file__name-icon {
-  margin-right: 10px;
+  margin-right: 15px;
+  font-size: 20px;
   display: inline-block;
+}
+
+.additional-info {
+  max-width: 480px;
+  display: inline-block;
+  padding: 30px 30px 30px 70px;
+  border: 1px solid $border-color;
+  border-radius: 5px;
+  margin-top: 90px;
 }

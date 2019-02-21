@@ -1,22 +1,22 @@
 .card {
-  border-radius: 8px;
-  border: 1px solid #cad1e2;
-  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid $border-color;
+  background-color: $white;
 }
 
 .card__header {
   display: flex;
-  border-bottom: 1px solid #cad1e2;
+  border-bottom: 1px solid $border-color;
 }
 
 .header-card__info {
   display: flex;
-  padding: 20px 30px 20px 70px;
+  padding: 30px 30px 25px 75px;
 }
 
 .header-card__details {
   .table {
-    margin-top: 30px;
+    margin-top: 15px;
   }
 }
 
@@ -27,11 +27,15 @@
 }
 
 .header-card__help {
-  padding: 20px 30px 20px 70px;
-  border-left: 1px solid #cad1e2;
-  min-width: 250px;
+  padding: 25px 30px 25px 70px;
+  border-left: 1px solid $border-color;
+  min-width: 350px;
 }
-  
+
 .card__content {
-  padding: 0 130px;
+  padding: 0 100px 0 130px;
+}
+
+.card__footer {
+  padding: 0 100px 70px 130px;
 }

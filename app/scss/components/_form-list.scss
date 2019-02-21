@@ -1,0 +1,36 @@
+.form-list {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+  margin: 110px 0;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  counter-reset: number-counter;
+}
+
+.form-list__item {
+  position: relative;
+  width: 100%;
+  counter-increment: number-counter;
+  &:after {
+    content: counter(number-counter);
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    color: $text-dark;
+    font-size: 16px;
+    text-align: center;
+    line-height: 40px;
+    left: -75px;
+    top: 13px;
+    border: 1px solid $border-color;
+    border-radius: 50%;
+  }
+  & + & {
+    margin-top: 110px;
+  }
+}
+
+.form-list__item--inline {
+  width: auto;
+}
