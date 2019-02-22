@@ -18,7 +18,7 @@ var config = {
   src: 'app/',
   cssin: 'app/css/**/*.css',
   jsin: 'app/js/**/*.js',
-  imgin: 'app/img/**/*.{jpg,jpeg,png,gif}',
+  imgin: 'app/images/**/*.{jpg,jpeg,png,gif}',
   htmlin: 'app/*.html',
   scssin: 'app/scss/**/*.scss',
   cssout: 'dist/css/',
