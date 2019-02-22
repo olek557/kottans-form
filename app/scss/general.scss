@@ -10,10 +10,14 @@
 
 * {
   box-sizing: border-box;
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 15px $accent-blue-color;
+  }
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: $roboto;
   letter-spacing: 1px;
   background-color: $background-color;
   padding-bottom: 100px;
@@ -22,6 +26,9 @@ body {
 .container {
   margin: 0 5px;
   @include bp(medium) {
+    margin: 0 15px;
+  }
+  @include bp(large) {
     max-width: 900px;
     margin: 0 auto;
   }
@@ -55,12 +62,6 @@ body {
   margin: -1px;
   padding: 0;
   border: 0;
-}
-
-.file__name-icon {
-  margin-right: 15px;
-  font-size: 20px;
-  display: inline-block;
 }
 
 .additional-info {

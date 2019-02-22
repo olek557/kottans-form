@@ -51,7 +51,7 @@
                   class="btn btn--medium btn--primary"
                   value="Place order"
                 />
-                <button class="btn btn--medium">Print a quote</button>
+                <button class="btn btn--medium" type="button">Print a quote</button>
               </div>
             </div>
             <div class="header-card__help">
@@ -77,6 +77,7 @@
               <div class="radio radio--huge">
                 <input
                   type="radio"
+                  required
                   id="translate-web"
                   name="translate-type"
                   value="web"
@@ -90,6 +91,7 @@
               <div class="radio radio--huge">
                 <input
                   type="radio"
+                  required
                   id="translate-doc"
                   name="translate-type"
                   value="doc"
@@ -103,6 +105,7 @@
               <div class="radio radio--huge">
                 <input
                   type="radio"
+                  required
                   id="translate-social"
                   name="translate-type"
                   value="social"
@@ -219,6 +222,7 @@
                   <div class="radio radio--small">
                     <input
                       type="radio"
+                      required
                       id="friendly-tone"
                       class="radio__input visuallyhidden"
                       name="desired-tone"
@@ -231,6 +235,7 @@
                   <div class="radio radio--small">
                     <input
                       type="radio"
+                      required
                       id="corporate-tone"
                       class="radio__input visuallyhidden"
                       name="desired-tone"
@@ -243,6 +248,7 @@
                   <div class="radio radio--small">
                     <input
                       type="radio"
+                      required
                       id="formal-tone"
                       class="radio__input visuallyhidden"
                       name="desired-tone"
@@ -262,15 +268,9 @@
                     <div class="range__label tc-accent-yellow">Average</div>
                     <div class="range__label">Yesterday</div>
                   </div>
-                  <datalist id="tickmarks">
-                    <option value="1">I Got time</option>
-                    <option value="2">Average</option>
-                    <option value="3">Yesterday</option>
-                  </datalist>
                   <input
                     type="range"
                     class="range__input"
-                    list="tickmarks"
                     min="1"
                     max="3"
                     value="2"
@@ -289,7 +289,10 @@
                     <input
                       type="text"
                       class="form-control form-control--medium"
+                      placeholder="Type your full name"
+                      required
                     />
+                    <div class="form-control__status"></div>
                   </div>
                 </div>
                 <div class="input-row">
@@ -298,20 +301,27 @@
                     <input
                       type="email"
                       class="form-control form-control--medium"
+                      placeholder="Type your email"
+                      required
                     />
+                    <div class="form-control__status"></div>
                   </div>
                   <div class="form-group">
                     <label class="form-label">Choose a password</label>
                     <input
                       type="password"
                       class="form-control form-control--medium"
+                      placeholder="Type your password"
+                      required
                     />
+                    <div class="form-control__status"></div>
                   </div>
                 </div>
                 <div class="input-row input-row--extended">
                   <div class="radio radio--medium">
                     <input
                       type="radio"
+                      required
                       name="payment-type"
                       id="pay-card"
                       class="radio__input visuallyhidden"
@@ -327,6 +337,7 @@
                   <div class="radio radio--medium">
                     <input
                       type="radio"
+                      required
                       name="payment-type"
                       id="pay-paypal"
                       class="radio__input visuallyhidden"
@@ -338,6 +349,7 @@
                   <div class="radio radio--medium">
                     <input
                       type="radio"
+                      required
                       name="payment-type"
                       id="pay-amazon"
                       class="radio__input visuallyhidden"
@@ -348,26 +360,34 @@
                   </div>
                 </div>
                 <div class="input-row">
-                  <div class="form-group">
+                  <div class="form-group form-group--credit-card">
                     <label class="form-label">Card number</label>
                     <input
                       type="text"
                       class="form-control form-control--huge"
+                      placeholder="0000 0000 0000 0000"
                     />
+                    <i class="fab fa-cc-visa form-group__icon"></i>
                   </div>
                   <div class="form-group">
                     <label class="form-label">Expiry date</label>
                     <input
                       type="text"
                       class="form-control form-control--small"
+                      placeholder="MM/YY"
                     />
+                    <div class="form-control__status"></div>
                   </div>
                   <div class="form-group">
                     <label class="form-label">Code</label>
                     <input
                       type="text"
                       class="form-control form-control--tiny"
+                      placeholder="***"
+                      minlength="3"
+                      maxlength="4"
                     />
+                    <div class="form-control__status"></div>
                   </div>
                 </div>
               </li>
@@ -376,7 +396,7 @@
           <footer class="card__footer">
             <div class="input-row input-row--reverse">
               <label class="checkbox">
-                <input type="checkbox">
+                <input type="checkbox" required>
                 <span class="checkbox__name">
                   I agree to the Terms & Conditions
                 </span>
@@ -386,7 +406,7 @@
                 class="btn btn--medium btn--primary"
                 value="Place order"
               />
-              <button class="btn btn--medium">Print a quote</button>
+              <button class="btn btn--medium" type="button">Print a quote</button>
             </div>
           </footer>
         </section>

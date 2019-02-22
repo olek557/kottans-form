@@ -15,7 +15,7 @@
   position: relative;
   width: 100%;
   counter-increment: number-counter;
-  &:after {
+  &:before {
     content: counter(number-counter);
     position: absolute;
     width: 40px;
@@ -24,10 +24,17 @@
     font-size: 16px;
     text-align: center;
     line-height: 40px;
-    left: -75px;
+    left: 0;
     top: 13px;
     border: 1px solid $border-color;
     border-radius: 50%;
+    display: inline-block;
+    @include bp(medium) {
+      left: -55px;
+    }
+    @include bp(large) {
+      left: -75px;
+    }
   }
   & + & {
     margin-top: 60px;

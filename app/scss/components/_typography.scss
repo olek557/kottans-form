@@ -24,6 +24,10 @@ h1 {
   color: $text-dark;
   font-weight: 300;
   margin-bottom: 50px;
+  display: inline-block;
+  @include bp(small) {
+    padding-left: 50px;
+  }
 }
 
 .h3__additional {

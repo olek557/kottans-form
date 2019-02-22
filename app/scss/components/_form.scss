@@ -18,6 +18,9 @@
       margin-left: 25px;
     }
   }
+  & + .input-row--extended {
+    margin-top: 60px;
+  }
 }
 
 .input-row--reverse {
@@ -25,7 +28,9 @@
 }
 
 .input-row--extended {
-  margin: 60px 0;
+  @include bp(medium) {
+    margin: 60px 0 80px 0;
+  }
 }
 
 .input-row--3-col {
@@ -86,11 +91,13 @@
 }
 
 .radio--medium {
-  width: 100%;
+  @include bp(small) {
+    width: 100%;
+  }
   .radio__label {
     width: 100%;
     min-height: 100px;
-    @include bp(medium) {
+    @include bp(large) {
       width: 215px;
     }
   }
@@ -160,11 +167,23 @@
   box-shadow: 0 0 0 1px $border-color;
   cursor: pointer;
   border-radius: 5px;
+  transition: all .5s;
+  &:hover {
+    background-color: rgba($background-color, .5s);
+  }
 }
 
 .upload-file {
   & + .files {
     margin-top: 35px;
+  }
+}
+
+.upload-file__input {
+  &:focus {
+    & + .upload-file__label {
+      box-shadow: 0 0 15px $accent-blue-color;
+    }
   }
 }
 
@@ -183,6 +202,12 @@
   }
 }
 
+.file__name-icon {
+  margin-right: 15px;
+  font-size: 20px;
+  display: inline-block;
+}
+
 .range {
   position: relative;
   width: 100%;
@@ -195,13 +220,21 @@
   position: relative;
   width: 100%;
   appearance: none;
-  border: 1px solid white;
+  border: none;
   background-color: transparent;
+  z-index: 2;
+  cursor: pointer;
   @include bp(medium) {
     width: 400px;
   }
   &::-webkit-slider-runnable-track {
-    // &::-moz-range-track {
+    width: 400px;
+    height: 10px;
+    background-color: transparent;
+    border: none;
+    border-radius: 10px;
+  }
+  &::-moz-range-track {
     width: 400px;
     height: 10px;
     background-color: transparent;
@@ -209,7 +242,6 @@
     border-radius: 10px;
   }
   &::-webkit-slider-thumb {
-    // &::-moz-range-thumb {
     height: 20px;
     width: 20px;
     appearance: none;
@@ -218,29 +250,38 @@
     background: $accent-yellow-color;
     margin-top: -5px;
   }
-  //   &::-ms-track {
-  //     width: 400px;
-  //     height: 10px;
-  //     background: transparent;
-  //     border-color: transparent;
-  //     border-width: 6px 0;
-  //     color: transparent;
-  //   }
-  //   &::-ms-fill-lower {
-  //     background: #eff1f5;
-  //     border-radius: 10px;
-  //   }
-  //   &::-ms-fill-upper {
-  //     background: #eff1f5;
-  //     border-radius: 10px;
-  //   }
-  //   &::-ms-thumb {
-  //     border: none;
-  //     height: 20px;
-  //     width: 20px;
-  //     border-radius: 50%;
-  //     background: #f2bf7d;
-  //   }
+  &::-moz-range-thumb {
+    height: 20px;
+    width: 20px;
+    appearance: none;
+    border: none;
+    border-radius: 50%;
+    background: $accent-yellow-color;
+    margin-top: -5px;
+  }
+  &::-ms-track {
+    width: 400px;
+    height: 10px;
+    background: transparent;
+    border-color: transparent;
+    border-width: 6px 0;
+    color: transparent;
+  }
+  &::-ms-fill-lower {
+    background: #eff1f5;
+    border-radius: 10px;
+  }
+  &::-ms-fill-upper {
+    background: #eff1f5;
+    border-radius: 10px;
+  }
+  &::-ms-thumb {
+    border: none;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: #f2bf7d;
+  }
 }
 
 .range__labels {
@@ -270,6 +311,7 @@
   color: $text-light;
   &:after {
     content: "";
+    z-index: 1;
     position: absolute;
     width: 10px;
     height: 10px;
@@ -280,11 +322,13 @@
     margin-left: -5px;
   }
   &:first-child {
+    left: 0;
     @include bp(medium) {
       left: -30px;
     }
   }
   &:last-child {
+    right: 0;
     @include bp(medium) {
       right: -30px;
     }
@@ -292,13 +336,31 @@
 }
 
 .form-group {
-  width: 100%;
+  position: relative;
+  @include bp(small){
+    width: 100%;
+  }
+}
+
+.form-group--credit-card {
+  position: relative;
+  .form-control {
+    padding-right: 20px;
+  }
+}
+
+.form-group__icon {
+  position: absolute;
+  font-size: 25px;
+  right: 10px;
+  bottom: 13px;
+  color: $text-light;
 }
 
 .form-label {
   display: block;
   color: $text-dark;
-  font-size: 15px;
+  font-size: 12px;
   text-transform: uppercase;
   margin-bottom: 10px;
 }
@@ -314,28 +376,57 @@
   box-shadow: none;
   font-weight: 300;
   border: 1px solid $border-color;
+  &::not(:placeholder-shown) {
+    & + .form-control__status {
+      &:after {
+        content: "\f057";
+        color: $error-color;
+        font-weight: 800;
+      }
+    }
+  }
+  &:valid {
+    & + .form-control__status {
+      &:after {
+        content: "\f058";
+        font-weight: 800;
+        color: $accent-blue-color;
+      }
+    }
+  }
+}
+
+.form-control__status {
+  &:after {
+    content: '';
+    position: absolute;
+    font-size: 20px;
+    font-family: $font-awesome;
+    bottom: 13px;
+    right: 5px;
+  }
 }
 
 .form-control--tiny {
-  @include bp(media){
+  @include bp(medium){
     width: 100px;
   }
 }
 
 .form-control--small {
-  @include bp(media){
+  @include bp(medium){
     width: 170px;
   }
 }
 
 .form-control--medium {
-  @include bp(media){
+  @include bp(medium){
     width: 300px;
   }
 }
 
 .form-control--huge {
-  @include bp(media){
+  @include bp(medium){
     width: 380px;
   }
 }
@@ -353,6 +444,7 @@
   background: none;
   padding-left: 50px;
   appearance: none;
+  cursor: pointer;
 }
 
 .select-wrapper {
