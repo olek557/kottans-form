@@ -1,5 +1,6 @@
 @import "components/mixin";
 @import "components/variables";
+@import "components/helpers";
 @import "vendors/normalize";
 @import "components/typography";
 @import "components/button";
@@ -37,33 +38,6 @@ body {
   }
 }
 
-// HELPERS
-.d-flex {
-  display: flex;
-}
-
-.t-center {
-  text-align: center;
-}
-
-.tc-accent-yellow {
-  color: $accent-yellow-color;
-}
-.tt-uppercase {
-  text-transform: uppercase;
-}
-
-.visuallyhidden {
-  position: absolute;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  width: 1px;
-  margin: -1px;
-  padding: 0;
-  border: 0;
-}
-
 .additional-info {
   max-width: 480px;
   display: inline-block;
@@ -74,4 +48,11 @@ body {
   @include bp(medium) {
     padding: 30px 30px 30px 70px;
   }
+}
+
+.additional-action {
+  color: $text-light;
+  font-size: 15px;
+  margin-bottom: 50px;
+  font-weight: 300;
 }

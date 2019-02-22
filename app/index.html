@@ -183,7 +183,7 @@
                 <div class="input-row">
                   <div class="input-row__label">From</div>
                   <div class="select-wrapper">
-                    <select name="" id="" class="form-control select">
+                    <select class="form-control select">
                       <option value="">English</option>
                       <option value="">Arabic</option>
                       <option value="" selected>French</option>
@@ -194,7 +194,7 @@
                 <div class="input-row">
                   <div class="input-row__label">To</div>
                   <div class="select-wrapper">
-                    <select name="" id="" class="form-control select">
+                    <select class="form-control select">
                       <option value="">English</option>
                       <option value="" selected>Arabic</option>
                       <option value="">French</option>
@@ -202,7 +202,7 @@
                     </select>
                   </div>
                   <div class="select-wrapper select-wrapper--with-delete">
-                    <select name="" id="" class="form-control select">
+                    <select class="form-control select">
                       <option value="">English</option>
                       <option value="">Arabic</option>
                       <option value="">French</option>
@@ -283,6 +283,9 @@
               </li>
               <li class="form-list__item">
                 <h3 class="h3">Sign up and choose a payment method</h3>
+                <div class="additional-action">
+                  Already have an account with us? <a href="/sign-in" class="link link--inline">Sign in</a>
+                </div>
                 <div class="input-row">
                   <div class="form-group">
                     <label class="form-label">Full name</label>
@@ -312,6 +315,7 @@
                       type="password"
                       class="form-control form-control--medium"
                       placeholder="Type your password"
+                      pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"
                       required
                     />
                     <div class="form-control__status"></div>
@@ -363,9 +367,13 @@
                   <div class="form-group form-group--credit-card">
                     <label class="form-label">Card number</label>
                     <input
-                      type="text"
+                      type="number"
                       class="form-control form-control--huge"
                       placeholder="0000 0000 0000 0000"
+                      maxlength="16"
+                      minlength="16"
+                      required
+                      pattern="[0-9]{13,16}"
                     />
                     <i class="fab fa-cc-visa form-group__icon"></i>
                   </div>
@@ -375,17 +383,20 @@
                       type="text"
                       class="form-control form-control--small"
                       placeholder="MM/YY"
+                      pattern="([0-9]{2}[/]?){2}"
+                      required
                     />
                     <div class="form-control__status"></div>
                   </div>
                   <div class="form-group">
                     <label class="form-label">Code</label>
                     <input
-                      type="text"
+                      type="number"
                       class="form-control form-control--tiny"
                       placeholder="***"
                       minlength="3"
                       maxlength="4"
+                      required
                     />
                     <div class="form-control__status"></div>
                   </div>
@@ -396,9 +407,10 @@
           <footer class="card__footer">
             <div class="input-row input-row--reverse">
               <label class="checkbox">
-                <input type="checkbox" required>
+                <input type="checkbox" class="checkbox__input" required>
                 <span class="checkbox__name">
-                  I agree to the Terms & Conditions
+                  I agree to the 
+                  <a href="/" class="link link--inline" target="_blink">Terms & Conditions</a> 
                 </span>
               </label>
               <input

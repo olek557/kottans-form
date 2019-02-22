@@ -1,0 +1,25 @@
+.d-flex {
+  display: flex;
+}
+
+.t-center {
+  text-align: center;
+}
+
+.tc-accent-yellow {
+  color: $accent-yellow-color;
+}
+.tt-uppercase {
+  text-transform: uppercase;
+}
+
+.visuallyhidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}

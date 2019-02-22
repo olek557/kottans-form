@@ -7,7 +7,7 @@
   table-layout: fixed;
   .table__cell {
     font-size: 11px;
-    padding: 5px;
+    padding: 5px 5px 5px 0;
   }
 }
 
@@ -23,7 +23,7 @@
   color: $text-light;
   font-size: 14px;
   font-weight: 300;
-  padding: 10px;
+  padding: 10px 10px 10px 0;
   .fas {
     color: inherit;
   }
