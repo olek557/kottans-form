@@ -23,7 +23,7 @@ var config = {
   scssin: 'app/scss/**/*.scss',
   cssout: 'dist/css/',
   jsout: 'dist/js/',
-  imgout: 'dist/img/',
+  imgout: 'dist/images/',
   htmlout: 'dist/',
   scssout: 'app/css/',
   cssoutname: 'style.css',
